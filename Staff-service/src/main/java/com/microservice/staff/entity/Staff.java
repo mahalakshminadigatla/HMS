@@ -3,12 +3,14 @@ package com.microservice.staff.entity;
 import javax.validation.constraints.Email;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "StaffDetails")
 public class Staff {
-	
-	
+
+	@Transient
+	public static final String SEQUENCE_NAME="staff_sequence";
 	@Id
 	private long staffId;
 	private String staffName;
