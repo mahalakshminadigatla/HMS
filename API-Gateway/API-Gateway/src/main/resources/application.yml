@@ -37,3 +37,7 @@ spring:
           uri: lb://Staff-Microservice
           predicates:
             - Path=/**
+
+eureka:
+  instance:
+    prefer-ip-address: true
